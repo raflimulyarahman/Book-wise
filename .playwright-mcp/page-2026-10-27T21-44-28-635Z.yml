@@ -1,0 +1,39 @@
+- generic [active] [ref=f4e1]:
+  - main [ref=f4e2]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e5]:
+        - img "logo" [ref=f4e6]
+        - heading "BookWise" [level=1] [ref=f4e7]
+      - generic [ref=f4e9]:
+        - heading "Create your library account" [level=1] [ref=f4e10]
+        - paragraph [ref=f4e11]: Please complete all fields and upload a valid university ID to gain access to the library
+        - generic [ref=f4e12]:
+          - group [ref=f4e13]:
+            - generic [ref=f4e14]: Email
+            - textbox [ref=f4e15]
+          - group [ref=f4e16]:
+            - generic [ref=f4e17]: Password
+            - textbox [ref=f4e18]
+          - group [ref=f4e19]:
+            - generic [ref=f4e20]: Full name
+            - textbox [ref=f4e21]
+          - group [ref=f4e22]:
+            - generic [ref=f4e23]: University ID Number
+            - spinbutton [ref=f4e24]: "0"
+          - group [ref=f4e25]:
+            - generic [ref=f4e26]: Upload University ID Card
+            - button "Choose File" [ref=f4e27]
+          - button "Sign Up" [ref=f4e28] [cursor=pointer]
+        - paragraph [ref=f4e29]:
+          - text: Already have an account?
+          - link "Sign in" [ref=f4e30] [cursor=pointer]:
+            - /url: /sign-in
+    - img "auth illustration" [ref=f4e32]
+  - button "Open Next.js Dev Tools" [ref=f4e38] [cursor=pointer]:
+    - generic [ref=f4e41]:
+      - text: Compiling
+      - generic [ref=f4e42]:
+        - generic [ref=f4e43]: .
+        - generic [ref=f4e44]: .
+        - generic [ref=f4e45]: .
+  - alert [ref=f4e46]
