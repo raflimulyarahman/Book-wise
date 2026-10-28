@@ -402,3 +402,27 @@
 .library-title {
   @apply mt-2 text-3xl font-semibold text-white xs:text-5xl;
 }
+
+@layer base {
+  :root {
+    /* Mode Terang (Default) */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+  }
+
+  /* Tambahkan ini: otomatis aktif saat sistem OS pakai Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --popover: 222.2 84% 4.9%;            /* background toast gelap */
+      --popover-foreground: 210 40% 98%;     /* teks toast terang */
+      --border: 217.2 32.6% 17.5%;           /* border toast gelap */
+    }
+  }
+
+  .dark {
+    /* Jika nanti pakai class .dark manual */
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+  }
+}

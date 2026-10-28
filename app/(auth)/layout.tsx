@@ -6,10 +6,10 @@ const Layout = ({ children }: LayoutProps<"/">) => {
       <section className="auth-form">
         <div className="auth-box">
           <div className="flex flex-row gap-3">
-            <Image src="/icons/logo.svg" alt="logo" width={37} height={37} />
+            <Image src="/icons/logo.svg" alt="logo" width={37} height={37} className="w-auto h-auto" />
             <h1 className="text-2xl font-semibold text-white">BookWise</h1>
           </div>
-          <div>{children}</div>
+          {children}
         </div>
       </section>
       <section className="auth-illustration">

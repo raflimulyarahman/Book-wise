@@ -18,6 +18,8 @@ import { Field, FieldLabel, FieldError } from "@/components/ui/field";
 import Link from "next/link";
 import { FIELD_NAMES, FIELD_TYPES } from "@/constants";
 import ImageUpload from "./ImageUpload";
+import { toast } from "./ui/toast";
+import { useRouter } from "next/navigation";
 
 interface Props<T extends FieldValues> {
   schema: ZodType<T>;
@@ -32,6 +34,7 @@ const AuthForm = <T extends FieldValues>({
   defaultValues,
   onSubmit,
 }: Props<T>) => {
+  const router = useRouter();
   const isSignIn = type === "SIGN_IN";
 
   const form: UseFormReturn<T> = useForm<T>({
@@ -42,7 +45,24 @@ const AuthForm = <T extends FieldValues>({
   });
 
   const handleSubmit: SubmitHandler<T> = async (data) => {
-    await onSubmit(data);
+    const result = await onSubmit(data);
+    if(result.success) {
+      toast.add({
+        title: "Success",
+        description: isSignIn 
+        ? "You have successfully signed in"
+        : "You have successfully signed up",
+        type: "success",
+      })
+
+      router.push("/")
+    } else {
+      toast.add({
+        title: `Error ${isSignIn ? "signing in" : "signing up"}`,
+        description: result.error ?? "An error occurred",
+        type: "error",
+      })
+    }
   };
 
   return (

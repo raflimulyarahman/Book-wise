@@ -45,10 +45,12 @@ const ImageUpload = ({ onFileChange }: Props) => {
 
   const onError = (error: unknown) => {
     console.error("Upload error:", error);
+    const err = error as { message?: string } | undefined;
+    const message = err?.message || "Your image could not be uploaded. Please try again.";
 
     toast.add({
       title: "Image upload failed",
-      description: `Your image could not be uploaded. please try again`,
+      description: message,
       type: "error",
     });
   };
@@ -58,8 +60,9 @@ const ImageUpload = ({ onFileChange }: Props) => {
     onFileChange(res.filePath);
 
     toast.add({
-      title: "Image uploaded sucsessfully",
-      description: `${res.filePath} uploaded sucsessfully`,
+      title: "Image uploaded successfully",
+      description: `${res.filePath} uploaded successfully`,
+      type: "success",
     });
   };
 
@@ -73,7 +76,7 @@ const ImageUpload = ({ onFileChange }: Props) => {
         ref={ikUploadRef}
         onError={onError}
         onSuccess={onSuccess}
-        fileName="test-upload.png"
+        useUniqueFileName={true}
         className="hidden"
       />
 
