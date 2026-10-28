@@ -1,0 +1,94 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "logo" [ref=e5]
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "Library" [ref=e8] [cursor=pointer]:
+              - /url: /library
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - heading "The Midnight Library" [level=1] [ref=e12]
+            - generic [ref=e13]:
+              - paragraph [ref=e14]: By Matt Haig
+              - paragraph [ref=e15]: Category Fantasy / Fiction
+              - generic [ref=e16]:
+                - img "star" [ref=e17]
+                - paragraph [ref=e18]: "4.6"
+            - generic [ref=e19]:
+              - paragraph [ref=e20]: Total Books 20
+              - paragraph [ref=e21]: Available Books 10
+            - paragraph [ref=e22]: A dazzling novel about all the choices that go into a life well lived, The Midnight Library tells the story of Nora Seed as she finds herself between life and death.
+            - button [ref=e23] [cursor=pointer]:
+              - img "book" [ref=e24]
+              - paragraph [ref=e25]: Borrow
+          - generic [ref=e27]:
+            - img "Book cover" [ref=e41]
+            - img "Book cover" [ref=e56]
+        - generic [ref=e57]:
+          - heading "Latest Books" [level=2] [ref=e58]
+          - list [ref=e59]:
+            - listitem [ref=e60]:
+              - link [ref=e61] [cursor=pointer]:
+                - /url: /books/1
+                - img "Book cover" [ref=e75]
+                - generic [ref=e76]:
+                  - paragraph [ref=e77]: The Midnight Library
+                  - paragraph [ref=e78]: Fantasy / Fiction
+                - generic [ref=e79]:
+                  - generic [ref=e80]:
+                    - img "calendar" [ref=e81]
+                    - paragraph [ref=e82]: 11 days left to return
+                  - button "Download receipt" [ref=e83]
+            - listitem [ref=e84]:
+              - link [ref=e85] [cursor=pointer]:
+                - /url: /books/2
+                - img "Book cover" [ref=e99]
+                - generic [ref=e100]:
+                  - paragraph [ref=e101]: Atomic Habits
+                  - paragraph [ref=e102]: Self-Help / Productivity
+            - listitem [ref=e103]:
+              - link [ref=e104] [cursor=pointer]:
+                - /url: /books/3
+                - img "Book cover" [ref=e118]
+                - generic [ref=e119]:
+                  - paragraph [ref=e120]: "You Don't Know JS: Scope & Closures"
+                  - paragraph [ref=e121]: Computer Science / JavaScript
+            - listitem [ref=e122]:
+              - link [ref=e123] [cursor=pointer]:
+                - /url: /books/4
+                - img "Book cover" [ref=e137]
+                - generic [ref=e138]:
+                  - paragraph [ref=e139]: The Alchemist
+                  - paragraph [ref=e140]: Philosophy / Adventure
+            - listitem [ref=e141]:
+              - link [ref=e142] [cursor=pointer]:
+                - /url: /books/5
+                - img "Book cover" [ref=e156]
+                - generic [ref=e157]:
+                  - paragraph [ref=e158]: Deep Work
+                  - paragraph [ref=e159]: Self-Help / Productivity
+            - listitem [ref=e160]:
+              - link [ref=e161] [cursor=pointer]:
+                - /url: /books/6
+                - img "Book cover" [ref=e175]
+                - generic [ref=e176]:
+                  - paragraph [ref=e177]: Clean Code
+                  - paragraph [ref=e178]: Computer Science / Programming
+            - listitem [ref=e179]:
+              - link [ref=e180] [cursor=pointer]:
+                - /url: /books/7
+                - img "Book cover" [ref=e194]
+                - generic [ref=e195]:
+                  - paragraph [ref=e196]: The Pragmatic Programmer
+                  - paragraph [ref=e197]: Computer Science / Programming
+            - listitem [ref=e198]:
+              - link [ref=e199] [cursor=pointer]:
+                - /url: /books/8
+                - img "Book cover" [ref=e213]
+                - generic [ref=e214]:
+                  - paragraph [ref=e215]: The Psychology of Money
+                  - paragraph [ref=e216]: Finance / Self-Help
+  - button "Open Next.js Dev Tools" [ref=e222] [cursor=pointer]
