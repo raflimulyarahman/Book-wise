@@ -4,10 +4,11 @@ import { eq } from "drizzle-orm";
 import { db } from "@/database/drizzle";
 import { users } from "@/database/schema";
 import { hash } from "bcryptjs";
-import { redirect } from "next/navigation";
-import { signIn } from "@/auth";
+import { signIn, signOut } from "@/auth";
 
-
+export const handleSignOut = async () => {
+  await signOut({ redirectTo: "/sign-in" });
+};
 
 export const signInWithCredential = async (
   params: Pick<AuthCredentials, "email" | "password">,

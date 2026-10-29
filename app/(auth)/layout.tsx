@@ -1,6 +1,14 @@
+import { auth } from "@/auth";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
-const Layout = ({ children }: LayoutProps<"/">) => {
+export const instant = false
+
+const Layout = async ({ children }: LayoutProps<"/">) => {
+
+  const session = await auth()
+
+  if(session) redirect("/")
   return (
     <main className="auth-container">
       <section className="auth-form">
