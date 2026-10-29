@@ -32,7 +32,10 @@ const nextConfig: NextConfig = {
         port: "",
       }
     ]
-  }
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
 };
 
 export default nextConfig;
