@@ -43,3 +43,5 @@ next-env.d.ts
 .playwright-mcp
 ERROR.MD
 drizzle
+.idea/
+.vscode/
